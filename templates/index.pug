@@ -2,8 +2,27 @@ doctype html
 html(lang="en")
   head
     title= pageTitle
-    link(rel='stylesheet', href='css/skeleton.css', type='text/css' )
+    link(rel='stylesheet', href='css/skeleton.css', type='text/css')
   body
+    //- Navigation
+    .nav
+      .nav-header
+        .nav-title
+          | JoGeek
+      .nav-btn
+        label(for='nav-check')
+          span
+          span
+          span
+      input#nav-check(type='checkbox')
+      .nav-links
+        a(href='//github.io/jo_geek', target='_blank') Github
+        a(href='http://stackoverflow.com/users/4084003/', target='_blank') Stackoverflow
+        a(href='https://in.linkedin.com/in/jonesvinothjoseph', target='_blank') LinkedIn
+        a(href='https://codepen.io/jo_Geek/', target='_blank') Codepen
+        a(href='https://jsfiddle.net/user/jo_Geek/', target='_blank') JsFiddle
+    
+    //- _Typography
     .container
       .row
         .twelve.cols
@@ -16,6 +35,7 @@ html(lang="en")
           h5 H5 - Header
           h6 H6 - Header
     hr
+    //- _Grid
     .container
       .row
         .twelve.cols 
@@ -30,6 +50,7 @@ html(lang="en")
         .ten.cols Ten Columns
         
     hr
+    //- _Buttons
     .container
       .row
         h1  _Buttons
@@ -38,6 +59,7 @@ html(lang="en")
         .btn.btn-primary btn.btn-primary
         .btn.btn-secondary btn.btn-secondary
     hr
+      //- _List
     .container
       .row
         h1  _List

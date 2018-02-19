@@ -19,7 +19,7 @@ gulp.task('pug', function buildHTML(){
 gulp.task('styles', function() {
     gulp.src('scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('css/'));
+        .pipe(gulp.dest('build/css/'));
 });
 
 //Watch task
