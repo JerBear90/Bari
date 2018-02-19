@@ -3,13 +3,9 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   watch = require('gulp-watch'),
   gulp_watch_pug = require('gulp-watch-pug'),
-  gulpPugBeautify = require('gulp-pug-beautify');
+  gulpPugBeautify = require('gulp-pug-beautify'),
+  connect = require('gulp-connect');
 
-// gulp.task('default', function () {
-//   return gulp.src('build/*.html')
-//
-//     .pipe(gulp.dest('build/'));
-// });
 
 // run this task by typing in gulp pug in CLI
 gulp.task('pug', function buildHTML(){
@@ -30,6 +26,7 @@ gulp.task('styles', function() {
 gulp.task('watch',function() {
     gulp.watch('scss/**/*.scss',['styles']);
     gulp.watch('templates/*.pug');
+    gulp.watch(['./build/*.html'], ['html']);
 });
 
 gulp.src('templates/**/*.pug')
@@ -39,6 +36,19 @@ gulp.src('templates/**/*.pug')
     .pipe(gulpPugBeautify({ omit_empty: true }))
     .pipe(gulp.dest('build/'));
 
+gulp.task('connect', function() {
+  connect.server({
+    root: 'build',
+    livereload: true
+  });
+});
+
+gulp.task('html', function () {
+  gulp.src('./build/*.html')
+    .pipe(gulp.dest('./build'))
+    .pipe(connect.reload());
+});
+
 
 // Run them all gulp
-gulp.task('default', [ 'pug', 'styles', 'watch' ]);
+gulp.task('default', [ 'pug', 'styles', 'watch', 'connect', 'watch' ]);

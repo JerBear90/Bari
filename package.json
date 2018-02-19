@@ -24,6 +24,7 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-sass": "^1.2.0",
+    "gulp-connect": "^5.4.0",
     "gulp-pug-beautify": "0.0.1",
     "gulp-sass": "^3.1.0",
     "gulp-serve": "^1.4.0"
