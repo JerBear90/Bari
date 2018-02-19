@@ -1,0 +1,26 @@
+{
+  "name": "Bari",
+  "version": "0.0.1",
+  "homepage": "",
+  "authors": [
+    "Jeramee Flemming"
+  ],
+  "description": "",
+  "main": "scss/skeleton.scss",
+  "keywords": [
+    "skeleton",
+    "sass",
+    "scss",
+    "responsive",
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.2"
+  }
+}

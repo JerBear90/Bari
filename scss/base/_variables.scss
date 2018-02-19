@@ -1,0 +1,39 @@
+// Variables
+
+// Breakpoints
+
+// TODO: Restucture - to much repetion
+$bp-larger-than-mobile    : "min-width: 400px" !default;
+$bp-larger-than-phablet   : "min-width: 550px" !default;
+$bp-larger-than-tablet    : "min-width: 750px" !default;
+$bp-larger-than-desktop   : "min-width: 1000px" !default;
+$bp-larger-than-desktophd : "min-width: 1200px" !default;
+
+// Color
+$base-color: #eee;
+$white: #FFF;
+$light-gray: #e1e1e1 !default;
+$dark-gray: #333 !default
+$primary-color: #FF0 !default;
+$secondary-color: lighten($dark-gray, 15%) !default;
+$link-color: #F00 !default;
+$font-color: #000 !default;
+$border-color: #F00;
+
+// Typography
+$font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+// Grid Variables
+$container-width: 960px !default;
+$container-width-larger-than-mobile: 85% !default;
+$container-width-larger-than-phablet: 80% !default;
+$total-cols: 12 !default;
+$col-width: 100 / $total-cols !default; // Calcs individual width base off of number of cols
+$col-margin: 4% !default;
+
+// Border-radius
+$global-radius: 4px;
+
+$light: "font-weight: 300" !default;
+$medium: "font-weight: 400" !default;
+$bold: "font-weight: 600" !default;

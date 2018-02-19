@@ -1,0 +1,33 @@
+// Base - Styles
+
+// HTML is set to 65.5% so that all REM mesurements are base on 10px
+// 1.5em = 15px
+
+
+// Underlaying page structure
+html{
+	font-size: 65%;
+}
+
+body{
+	font-size: 1.5em;
+	line-height: 1.6;
+	font-weight: $medium;
+	color: $base-color;
+}
+
+// Links
+a{
+	color: $link-color;
+	&:hover{
+		color: darken($link-color, 5%);
+	}
+}
+
+// Misc
+hr{
+	margin-top:3rem;
+	margin-bottom: 3.5rem;
+	border-width: 0px;
+	border-top: 1px solid $light-gray;
+}

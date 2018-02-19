@@ -1,0 +1,90 @@
+// Btn,Button, and Input Classes
+
+// Button and Input shared Qualities
+%inital-state{
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: $secondary-color;
+  text-align: center;
+  font-size: 11px;
+  font-weight: $bold;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: $global-radius;
+  border: 1px solid $border-color;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+%hover-state{
+  color: $dark-gray;
+  border-color: lighten($dark-gray, 33%);
+  outline: 0;
+}
+
+
+// Btn - Buttons
+.btn,
+button{
+    @extend %shared-qualities;
+    &:hover{
+      @extend %hover-state;
+    }
+    &:focus{
+      @extend %hover-state;
+    }
+}
+
+input{
+  &[type="submit"],
+  &[type="reset"],
+  &[type="button"]{
+      @extend %shared-qualities;
+  }
+  &:hover{
+    @extend %hover-state;
+  }
+  &:focus{
+    @extend %hover-state;
+  }
+}
+
+%primary-inital-state{
+  color: $white;
+  background-color: $link-color;
+  border-color: $link-color;
+}
+
+.btn.btn-primary{
+  &:hover{
+    @extend %primary-inital-state;
+  }
+}
+
+input{
+  &[type="submit"].button-primary:hover,
+  &[type="reset"].button-primary:hover,
+  &[type="button"].button-primary:hover {
+    @extend %primary-inital-state;
+  }
+  &[type="email"],
+  &[type="number"],
+  &[type="search"],
+  &[type="text"],
+  &[type="tel"],
+  &[type="url"],
+  &[type="password"] {
+    height: 38px;
+    padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
+    background-color: $white;
+    border: 1px solid lighten($border-color, 8.8%);
+    border-radius: $global-radius;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+}

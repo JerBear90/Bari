@@ -1,0 +1,9 @@
+// Column Settings
+
+@function grid-col-width($n){
+	@return $col-width * $n - ($col-margin*($total-cols -$n)/$total-cols);
+}
+
+@function grid-offset-length($n){
+	@return grid-col-width($n) + $col-margin;
+}

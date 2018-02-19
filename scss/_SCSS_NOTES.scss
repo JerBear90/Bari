@@ -1,0 +1,101 @@
+// Maps with Sass
+
+$map: (
+  key1: value1,
+  key2: value2,
+  key3: value3
+);
+
+@each $key, $value in $map {
+  .element--#{$key} {
+    background: $value;
+  }
+}
+
+// @each can iterate over a list
+// One declaration for an image that will repeat itself
+@each $name in 'save' 'cancel' 'help'{
+	.icon-#{name}{
+		background-image: url('/images/#{name}.png')
+	}
+}
+
+/* compiled CSS */
+.icon-save {
+  background-image: url("/images/save.png");
+}
+.icon-cancel {
+  background-image: url("/images/cancel.png");
+}
+.icon-help {
+  background-image: url("/images/help.png");
+}
+
+// @content directive. It allows passing an entire SCSS content block as an argument to the mixin:
+@mixin only-for-mobile($breakpoint){
+	@media (max-width: #{$breakpoint}){
+		@content;
+	}
+}
+
+@include only-for-mobile(480px) {
+	p{
+		font-size: 15px;
+	}
+}
+
+// Extending Selectors
+// .cat has all the properties of its "parent class" .animal, plus any specific ones it adds or overrides.
+.animal{
+	background: gray;
+}
+.cat{
+	@extend .animal;
+	color: white;
+}
+
+// Even better
+// Placeholder selectors %tempselector
+// Never outputted to CSS
+%animal{
+	background: gray;
+	color: red;
+	// etc...
+}
+
+.cat{
+	@extend %animal;
+	color: white;
+}
+.dog{
+	@extend %animal;
+	color: black;
+}
+
+
+// Selector multiple inheritance
+%animal{
+	background: gray;
+	color: red;
+	// etc...
+}
+
+%location{
+	border: 1px solid white;
+	border-radius: 3px;
+	// etc...
+}
+.cat{
+	@extend %animal;
+	@extend %location;
+	color: white;
+}
+.dog{
+	@extend %animal;
+	color: black;
+}
+
+
+
+
+

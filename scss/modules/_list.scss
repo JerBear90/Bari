@@ -1,0 +1,21 @@
+// List
+// Ul - OL - LI
+ol{
+  list-style: decimal inside;
+}
+
+ul{
+  list-style: circle inside;
+}
+
+// TODO: Rework this section - not sure why there are ul's inside of uls...
+ul, ol{
+  padding-left: 0px;
+  margin-top: 0;
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%;
+}
+
+li{
+  margin-bottom: 1rem;
+}
