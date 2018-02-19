@@ -193,7 +193,7 @@ body {
   font-size: 1.5em;
   line-height: 1.6;
   font-weight: "font-weight: 400";
-  color: #EEE; }
+  color: #212121; }
 
 a {
   color: #F00; }
@@ -204,7 +204,7 @@ hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0px;
-  border-top: 1px solid #e1e1e1; }
+  border-top: 1px solid #E0E0E0; }
 
 .full-width {
   width: 100%;
@@ -254,6 +254,15 @@ h5 {
   font-size: 1.5rem;
   line-height: 1.6;
   letter-spacing: 0rem; }
+
+.book {
+  font-weight: 300; }
+
+.medium {
+  font-weight: 400; }
+
+.bold {
+  font-weight: 600; }
 
 @media (min-width: 550px) {
   h1 {
@@ -354,7 +363,7 @@ button, input[type="submit"], input[type="reset"], input[type="button"] {
   white-space: nowrap;
   background-color: transparent;
   border-radius: 4px;
-  border: 1px solid #F00;
+  border: 1px solid #E8E8E8;
   cursor: pointer;
   box-sizing: border-box; }
 
@@ -363,8 +372,8 @@ code {
   margin: 0 .2rem;
   font-size: 90%;
   white-space: nowrap;
-  background: #f1f1f1;
-  border: 1px solid #e1e1e1;
+  background: #f0f0f0;
+  border: 1px solid #E0E0E0;
   border-radius: 4px; }
 
 pre > code {
@@ -384,7 +393,7 @@ select {
   height: 38px;
   padding: 6px 10px;
   background-color: #fff;
-  border: 1px solid #ff2d2d;
+  border: 1px solid #fefefe;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box; }
@@ -403,12 +412,12 @@ textarea {
   padding-bottom: 6px; }
 
 input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus {
-  border: 1px solid #FF0;
+  border: 1px solid #333;
   outline: 0; }
 
 textarea:focus,
 select:focus {
-  border: 1px solid #FF0;
+  border: 1px solid #333;
   outline: 0; }
 
 label,
