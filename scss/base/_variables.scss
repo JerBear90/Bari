@@ -10,15 +10,21 @@ $bp-larger-than-desktop   : "min-width: 1000px" !default;
 $bp-larger-than-desktophd : "min-width: 1200px" !default;
 
 // Color
-$base-color: #eee;
-$white: #FFF;
-$light-gray: #e1e1e1 !default;
+$white: #FFFFF !default;
+$light-gray: #E0E0E0 !default;
 $dark-gray: #333 !default
-$primary-color: #FF0 !default;
-$secondary-color: lighten($dark-gray, 15%) !default;
-$link-color: #F00 !default;
+$black: #212121 !default;;
+$lt-blue: #03A9F4 !default;;
+$blue: #42A5F5 !default;;
+$blue-gray: #607D8B !default;;
+$orange: #F44336 !default;;
+$base-color: $black !default;;
+$primary-color: $blue !default;
+$secondary-color: $orange !default;
+$tertiary-color: $blue-gray !default;
+$link-color: $white !default;
 $font-color: #000 !default;
-$border-color: #F00;
+$border-color: #E8E8E8 !default;
 
 // Typography
 $font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
@@ -34,6 +40,6 @@ $col-margin: 4% !default;
 // Border-radius
 $global-radius: 4px;
 
-$light: "font-weight: 300" !default;
-$medium: "font-weight: 400" !default;
-$bold: "font-weight: 600" !default;
+$book: 200 !default;
+$medium: 400 !default;
+$bold: 600 !default;

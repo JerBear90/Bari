@@ -1,0 +1,41 @@
+//urls
+$url-1: url(http://rel.resultspw.com/images/large-hero.jpg);
+
+
+.hero-img-holder {
+	height: 500px;
+	background-position: 25% 50%;
+	background-size: cover;
+  background-image:url(http://rel.resultspw.com/images/medium-hero.jpg);
+}
+.hero-copy {
+	background-color: transparentize($white, .5);
+	overflow: hidden;
+}
+@media only screen and(max-width: 767px) {
+  .hero-img-holder {
+  	height: 300px;
+    background-position: center;
+  }
+}
+@media only screen and(min-width: 768px) {
+	.hero-img-holder {
+		position: absolute;
+		height: 500px;
+		width: 100%;
+		background-image: $url-1 !important;
+	}
+	.hero-copy {
+		margin-top: 2.25em;
+		position: relative;
+	}
+	.home-static .container {
+    height: 500px;
+		margin: 0 auto;
+		max-width: 936px;
+		padding: 1em;
+	}
+}
+.home-static.ft-left .hero-img-holder {
+	background-position: 75% 50%;
+}

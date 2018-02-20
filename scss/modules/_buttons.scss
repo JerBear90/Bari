@@ -24,9 +24,38 @@
 .btn,
 button{
     @extend %inital-state;
-    &:hover{
+    transition: all .3s;
+}
 
-    }
+%btn-text-color{
+  color: $white;
+}
+.btn-primary{
+  background-color: $primary-color;
+  @extend %btn-text-color;
+  &:hover{
+    background-color: darken($primary-color, 12%);
+  }
+}
+
+.btn-secondary{
+  background-color: $secondary-color;
+  @extend %btn-text-color;
+  &:hover{
+    background-color: darken($secondary-color, 12%);
+  }
+}
+
+.btn-tertiary{
+  background-color: $tertiary-color;
+  @extend %btn-text-color;
+  &:hover{
+    background-color: darken($tertiary-color, 12%);
+  }
+}
+
+.btn-ghost{
+
 }
 
 input{

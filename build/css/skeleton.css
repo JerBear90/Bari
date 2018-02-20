@@ -192,19 +192,17 @@ html {
 body {
   font-size: 1.5em;
   line-height: 1.6;
-  font-weight: "font-weight: 400";
-  color: #eee; }
+  font-weight: 400;
+  color: #212121; }
 
 a {
-  color: #F00; }
-  a:hover {
-    color: #e60000; }
+  color: #FFFFF; }
 
 hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0px;
-  border-top: 1px solid #e1e1e1; }
+  border-top: 1px solid #E0E0E0; }
 
 .full-width {
   width: 100%;
@@ -217,13 +215,25 @@ hr {
 .float-right {
   float: right; }
 
-.dloat-left {
+.float-left {
   float: left; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.padding-twenty {
+  padding: 20px; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
-  font-weight: "font-weight: 400"; }
+  font-weight: 400; }
 
 h1 {
   font-size: 4rem;
@@ -255,6 +265,15 @@ h5 {
   line-height: 1.6;
   letter-spacing: 0rem; }
 
+.book {
+  font-weight: 200; }
+
+.medium {
+  font-weight: 400; }
+
+.bold {
+  font-weight: 600; }
+
 @media (min-width: 550px) {
   h1 {
     font-size: 5rem; }
@@ -273,15 +292,129 @@ p {
   margin-top: 0px; }
 
 /* Modules */
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #4d4d4d;
+  position: relative; }
+  .nav > .nav-header {
+    display: inline; }
+    .nav > .nav-header > .nav-title {
+      display: inline-block;
+      font-size: 22px;
+      color: #fff;
+      padding: 10px; }
+  .nav > .nav-btn {
+    display: none; }
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px; }
+    .nav > .nav-links > a {
+      display: inline-block;
+      padding: 13px 10px;
+      text-decoration: none;
+      color: #efefef; }
+      .nav > .nav-links > a:hover {
+        background-color: rgba(0, 0, 0, 0.3); }
+  .nav > #nav-check {
+    display: none; }
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px; }
+      .nav > .nav-btn > label:hover {
+        background-color: rgba(0, 0, 0, 0.3); }
+      .nav > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee; }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0; }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%; }
+  .nav > #nav-check:not(:checked) + .nav-links {
+    height: 0; }
+  .nav > #nav-check:checked + .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto; } }
+
+.hero-img-holder {
+  height: 500px;
+  background-position: 25% 50%;
+  background-size: cover;
+  background-image: url(http://rel.resultspw.com/images/medium-hero.jpg); }
+
+.hero-copy {
+  background-color: rgba(255, 255, 255, 0.5);
+  overflow: hidden; }
+
+@media only screen and (max-width: 767px) {
+  .hero-img-holder {
+    height: 300px;
+    background-position: center; } }
+
+@media only screen and (min-width: 768px) {
+  .hero-img-holder {
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    background-image: url(http://rel.resultspw.com/images/large-hero.jpg) !important; }
+  .hero-copy {
+    margin-top: 2.25em;
+    position: relative; }
+  .home-static .container {
+    height: 500px;
+    margin: 0 auto;
+    max-width: 936px;
+    padding: 1em; } }
+
+.home-static.ft-left .hero-img-holder {
+  background-position: 75% 50%; }
+
+.background-white {
+  background-color: #fff;
+  color: #212121; }
+
+.background-blue {
+  background-color: #42A5F5;
+  color: #fff; }
+
+.background-black {
+  background-color: #212121;
+  color: #fff; }
+
+.background-dark-gray {
+  background-color: #333;
+  color: #fff; }
+
 .btn,
 button, input[type="submit"], input[type="reset"], input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #595959;
+  color: #F44336;
   text-align: center;
   font-size: 11px;
-  font-weight: "font-weight: 600";
+  font-weight: 600;
   line-height: 38px;
   letter-spacing: .1rem;
   text-transform: uppercase;
@@ -289,22 +422,43 @@ button, input[type="submit"], input[type="reset"], input[type="button"] {
   white-space: nowrap;
   background-color: transparent;
   border-radius: 4px;
-  border: 1px solid #F00;
+  border: 1px solid #E8E8E8;
   cursor: pointer;
   box-sizing: border-box; }
+
+.btn,
+button {
+  transition: all .3s; }
+
+.btn-primary, .btn-secondary, .btn-tertiary {
+  color: #fff; }
+
+.btn-primary {
+  background-color: #42A5F5; }
+  .btn-primary:hover {
+    background-color: #0d89ed; }
+
+.btn-secondary {
+  background-color: #F44336; }
+  .btn-secondary:hover {
+    background-color: #e11b0c; }
+
+.btn-tertiary {
+  background-color: #607D8B; }
+  .btn-tertiary:hover {
+    background-color: #475c67; }
 
 code {
   padding: .2rem .5rem;
   margin: 0 .2rem;
   font-size: 90%;
   white-space: nowrap;
-  background: #f1f1f1;
-  border: 1px solid #e1e1e1;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #f0f0f0;
   border-radius: 4px; }
 
 pre > code {
   display: block;
-  padding: 1rem 1.5rem;
   white-space: pre; }
 
 input[type='email'],
@@ -319,7 +473,7 @@ select {
   height: 38px;
   padding: 6px 10px;
   background-color: #fff;
-  border: 1px solid #ff2d2d;
+  border: 1px solid #fefefe;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box; }
@@ -338,12 +492,12 @@ textarea {
   padding-bottom: 6px; }
 
 input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus {
-  border: 1px solid #FF0;
+  border: 1px solid #42A5F5;
   outline: 0; }
 
 textarea:focus,
 select:focus {
-  border: 1px solid #FF0;
+  border: 1px solid #42A5F5;
   outline: 0; }
 
 label,
@@ -395,58 +549,58 @@ label > .label-body {
 
 .one.col,
 .one.cols {
-  width: 4.6666666667%; }
+  width: 4.66667%; }
 
 .two.cols {
-  width: 13.3333333333%; }
+  width: 13.33333%; }
 
 .three.cols {
   width: 22%; }
 
 .four.cols {
-  width: 30.6666666667%; }
+  width: 30.66667%; }
 
 .five.cols {
-  width: 39.3333333333%; }
+  width: 39.33333%; }
 
 .six.cols {
   width: 48%; }
 
 .seven.cols {
-  width: 56.6666666667%; }
+  width: 56.66667%; }
 
 .eight.cols {
-  width: 65.3333333333%; }
+  width: 65.33333%; }
 
 .nine.cols {
   width: 74%; }
 
 .ten.cols {
-  width: 82.6666666667%; }
+  width: 82.66667%; }
 
 .eleven.cols {
-  width: 91.3333333333%; }
+  width: 91.33333%; }
 
 .twelve.cols {
   width: 100%;
   margin-left: 0px; }
 
 .one-third.col {
-  width: 30.6666666667%; }
+  width: 30.66667%; }
 
 .two-thirds.col {
-  width: 65.3333333333%; }
+  width: 65.33333%; }
 
 .one-half.col {
   width: 48%; }
 
 .offset-one.col,
 .offset-one-cols {
-  margin-left: 8.6666666667%; }
+  margin-left: 8.66667%; }
 
 .offset-two.col,
 .offset-two-cols {
-  margin-left: 17.3333333333%; }
+  margin-left: 17.33333%; }
 
 .offset-three.col,
 .offset-three-cols {
@@ -454,11 +608,11 @@ label > .label-body {
 
 .offset-four.col,
 .offset-four-cols {
-  margin-left: 34.6666666667%; }
+  margin-left: 34.66667%; }
 
 .offset-five.col,
 .offset-five-cols {
-  margin-left: 43.3333333333%; }
+  margin-left: 43.33333%; }
 
 .offset-six.col,
 .offset-six-cols {
@@ -466,11 +620,11 @@ label > .label-body {
 
 .offset-seven.col,
 .offset-seven-cols {
-  margin-left: 60.6666666667%; }
+  margin-left: 60.66667%; }
 
 .offset-eight.col,
 .offset-eight-cols {
-  margin-left: 69.3333333333%; }
+  margin-left: 69.33333%; }
 
 .offset-nine.col,
 .offset-nine-cols {
@@ -478,19 +632,19 @@ label > .label-body {
 
 .offset-ten.col,
 .offset-ten-cols {
-  margin-left: 86.6666666667%; }
+  margin-left: 86.66667%; }
 
 .offset-eleven.col,
 .offset-eleven-cols {
-  margin-left: 95.3333333333%; }
+  margin-left: 95.33333%; }
 
 .offset-by-one-third.column,
 .offset-by-one-third.columns {
-  margin-left: 34.6666666667%; }
+  margin-left: 34.66667%; }
 
 .offset-by-two-thirds.column,
 .offset-by-two-thirds.columns {
-  margin-left: 69.3333333333%; }
+  margin-left: 69.33333%; }
 
 .offset-by-one-half.column,
 .offset-by-one-half.column {

@@ -19,9 +19,6 @@ body{
 // Links
 a{
 	color: $link-color;
-	&:hover{
-		color: darken($link-color, 5%);
-	}
 }
 
 // Misc

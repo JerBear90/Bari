@@ -1,0 +1,206 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    link(rel='stylesheet', href='css/skeleton.css', type='text/css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/themes/prism.css', type='text/css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.js')
+  body
+    //- Navigation
+    .nav
+      .nav-header
+        .nav-title
+          | JoGeek
+      .nav-btn
+        label(for='nav-check')
+          span
+          span
+          span
+      input#nav-check(type='checkbox')
+      .nav-links
+        a(href='//github.io/jo_geek', target='_blank') Typography
+        a(href='http://stackoverflow.com/users/4084003/', target='_blank') Grid
+        a(href='https://in.linkedin.com/in/jonesvinothjoseph', target='_blank') Buttons
+        a(href='https://codepen.io/jo_Geek/', target='_blank') List
+        a(href='https://jsfiddle.net/user/jo_Geek/', target='_blank') CodeBlock
+    
+    
+    //- _HeroUnit
+    .container
+      .row
+        .ten.cols
+          .home-static
+            .hero-img-holder(style='background-image:url(http://rel.resultspw.com/images/medium-hero.jpg);')
+            .container
+              .hero-copy.six.cols.padding-twenty
+                h1 Hero Headline
+                h4.book Hero Subheadline
+                a.btn.btn-primary(href='/online/mobile_banking/') Learn More
+    .container
+      .row
+        .twelve.col
+          h5.book Hero - Static 
+    .container
+      .row
+        pre.line-numbers.language-css
+          code
+            .home-static
+          code
+            .hero-img-holder .hero-img-holder
+          code
+            .container  .container
+          code
+            .hero-copy.six.cols.padding-twenty    .hero-copy.six.cols
+          code
+            h1      h1
+          code
+            h4.book       h4.book
+          code
+            a.btn.btn-primary(href='/online/mobile_banking/')       a.btn.btn-primary(href='/online/mobile_banking/') Learn More
+      hr
+    //- _Typography
+    .container
+      .row
+        .twelve.cols
+          h1 _Typography
+          hr 
+          h1 H1 - Header
+          h2 H2 - Header
+          h3 H3 - Header
+          h4 H4 - Header
+          h5 H5 - Header
+          h6 H6 - Header    
+    .container
+      .row
+        h3.book Book
+        h3.medium Medium
+        h3.bold Bold 
+    .container
+      .row
+        .twelve.cols
+          pre.language-css
+            code.language-css
+              span .book .book Book Text
+              span .book .book Book Text
+            code
+              .medium .medium Book Text
+            code
+              .bold .bold Book Text  
+      hr
+    //- _Grid
+    .container
+      .row
+        .twelve.cols 
+          h1 _Grid
+    .container
+      .row
+        .one.col.background-blue One Col
+        .eleven.cols.background-blue Twleve Columns
+    .container
+      .row    
+        .two.cols.background-dark-gray Two Columns
+        .ten.cols.background-dark-gray Ten Columns
+    .container
+      .row
+        .twelve.cols
+          pre.language-css
+            code
+              .container .container
+            code
+              .row  .row
+            code
+              .row
+                .two.cols   .two.cols
+            code
+                .ten.cols   .ten.cols
+      hr
+    //- _Buttons
+    .container
+      .row
+        h1  _Buttons
+    .container      
+      .row
+        .btn.btn-primary btn.btn-primary
+        .btn.btn-secondary btn.btn-secondary
+        .btn.btn-tertiary btn.btn-secondary
+        
+    .container
+      .row
+        pre.language-css
+          code
+            .btn.btn-primary .btn.btn-primary
+          code
+            .btn.btn-secondary .btn.btn-secondary
+          code
+            .btn.btn-tertiary .btn.btn-tertiary
+      hr
+        
+        
+    .container
+      .row
+        h1 _Background-Colors
+    .container
+      .row
+        .three.cols.background-white.text-center.padding-twenty background-white
+        .three.cols.background-blue.text-center.padding-twenty background-blue
+        .three.cols.background-black.text-center.padding-twenty background-black
+        .three.cols.background-dark-gray.text-center.padding-twenty background-dark-gray
+    .container
+      .row
+        pre.language-css
+          code
+            .three.cols .background-white
+          code
+            .three.cols .background-blue
+          code
+            .three.cols .background-black
+          code
+            .three.cols .background-dark-gray
+      hr
+      //- _List
+    .container
+      .row
+        h1  _List
+    .container
+      .row
+        .twelve.cols
+          ul
+            li Unordered list item
+            li Unordered list item
+            li Unordered list item
+    .container
+      .row
+        h5.book Unordered List
+        pre.language-css
+          code
+            ul .ul
+          code
+              li  .li Unorder list-item
+          code
+              li  .li Unorder list-item
+          code
+              li  .li Unorder list-item
+    .container          
+      .row
+        .twelve.cols
+          ol
+            li  unordered list item
+    .container
+      .row
+        h5.book Ordered List
+        pre.language-css
+          code
+            ol .ol
+          code
+              li  .li Order list-item
+          code
+              li  .li Order list-item
+          code
+              li  .li Order list-item        
+      hr
+    .container
+      .row
+        h1 _CodeBlock        
+      .row
+        .ten.cols
+          
