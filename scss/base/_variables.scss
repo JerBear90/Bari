@@ -19,9 +19,10 @@ $blue: #42A5F5 !default;;
 $blue-gray: #607D8B !default;;
 $orange: #F44336 !default;;
 $base-color: $black !default;;
-$primary-color: $dark-gray !default;;
-$secondary-color: lighten($dark-gray, 15%) !default;
-$link-color: #F00 !default;
+$primary-color: $blue !default;
+$secondary-color: $orange !default;
+$tertiary-color: $blue-gray !default;
+$link-color: $white !default;
 $font-color: #000 !default;
 $border-color: #E8E8E8 !default;
 
@@ -39,6 +40,6 @@ $col-margin: 4% !default;
 // Border-radius
 $global-radius: 4px;
 
-$light: "font-weight: 300" !default;
-$medium: "font-weight: 400" !default;
-$bold: "font-weight: 600" !default;
+$book: 200 !default;
+$medium: 400 !default;
+$bold: 600 !default;

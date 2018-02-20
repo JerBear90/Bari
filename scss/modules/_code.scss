@@ -3,15 +3,14 @@ code{
   margin: 0 .2rem;
   font-size: 90%;
   white-space: nowrap;
+  font-family: $font-family;
   background: lighten($light-gray, 6.4%);
-  border: 1px solid $light-gray;
   border-radius: $global-radius;
 }
 
-pre >{
+pre > {
   code{
     display: block;
-    padding: 1rem 1.5rem;
     white-space: pre;
   }
 }
