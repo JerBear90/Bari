@@ -260,6 +260,11 @@ h5 {
   line-height: 1.5;
   letter-spacing: -.05rem; }
 
+h5 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0rem; }
+
 .book {
   font-weight: 200; }
 
