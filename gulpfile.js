@@ -4,7 +4,8 @@ var gulp = require('gulp'),
   watch = require('gulp-watch'),
   gulp_watch_pug = require('gulp-watch-pug'),
   gulpPugBeautify = require('gulp-pug-beautify'),
-  connect = require('gulp-connect');
+  connect = require('gulp-connect'),
+  jshint = require('gulp-jshint');
 
 
 // run this task by typing in gulp pug in CLI
@@ -22,10 +23,29 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('build/css/'));
 });
 
+// Gulp JS
+// gulp.task('scripts', function() {
+//   return gulp.src('js/**/*.js')
+//       .pipe(gulp.dest('build/js/'));
+// });
+
+// configure the jshint task
+gulp.task('jshint', function() {
+  return gulp.src('js/**/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(gulp.dest('build/js/'))
+});
+
+gulp.task('scriptwatch', function() {
+  gulp.watch('js/**/*.js', ['jshint']);
+});
+
 //Watch task
 gulp.task('watch',function() {
     gulp.watch('scss/**/*.scss',['styles']);
     gulp.watch('templates/*.pug');
+    // gulp.watch('js/**/*.js'), ['scripts'];
     gulp.watch(['./build/*.html'], ['html']);
 });
 
@@ -51,4 +71,4 @@ gulp.task('html', function () {
 
 
 // Run them all gulp
-gulp.task('default', [ 'pug', 'styles', 'watch', 'connect', 'watch' ]);
+gulp.task('default', [ 'pug', 'styles', 'watch', 'connect', 'scriptwatch' ]);
