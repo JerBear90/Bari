@@ -4,9 +4,15 @@ html(lang="en")
     title= pageTitle
     link(rel='stylesheet', href='css/skeleton.css', type='text/css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/themes/prism.css', type='text/css')
+    link(rel='stylesheet', href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css', type='text/css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.js')
-    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js')
+    script(src='https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js')
     script(src='js/scripts.js')
+    
   body
     //- Navigation
     .nav
@@ -31,7 +37,7 @@ html(lang="en")
     .container
       .row
         .ten.cols
-          .home-static
+          .hero-static
             .hero-img-holder(style='background-image:url(http://rel.resultspw.com/images/medium-hero.jpg);')
             .container
               .hero-copy.six.cols.padding-twenty
@@ -46,7 +52,7 @@ html(lang="en")
       .row
         pre.line-numbers.language-css
           code
-            .home-static
+            .hero-static
           code
             .hero-img-holder .hero-img-holder
           code
@@ -59,19 +65,20 @@ html(lang="en")
             h4.book       h4.book
           code
             a.btn.btn-primary(href='/online/mobile_banking/')       a.btn.btn-primary(href='/online/mobile_banking/') Learn More
-      hr
+      hr      
     //- _Typography
     .container
       .row
         .twelve.cols
           h1 _Typography
           hr 
-          h1 H1 - Header
-          h2 H2 - Header
-          h3 H3 - Header
-          h4 H4 - Header
-          h5 H5 - Header
-          h6 H6 - Header    
+          h1.extra-large h1.extra-large
+          h1 H1
+          h2 H2
+          h3 H3
+          h4 H4
+          h5 H5
+          h6 H6    
     .container
       .row
         h3.book Book
@@ -122,10 +129,10 @@ html(lang="en")
         h1  _Buttons
     .container      
       .row
-        .btn.btn-primary btn.btn-primary
-        .btn.btn-secondary btn.btn-secondary
+        .btn.btn-primary.mr-15 btn.btn-primary
+        .btn.btn-secondary.mr-15 btn.btn-secondary
         .btn.btn-tertiary btn.btn-secondary
-        
+                
     .container
       .row
         pre.language-css
@@ -135,7 +142,22 @@ html(lang="en")
             .btn.btn-secondary .btn.btn-secondary
           code
             .btn.btn-tertiary .btn.btn-tertiary
-      hr
+    .container
+      .row.mt-15
+        .wrapper
+          .btn-border-animate
+            a(href='#')
+              p Hover over me
+              .hoverBtn
+              .hoverBtn-bottom
+      .row
+        pre.language-pug
+          code .btn-border-animate
+          code  a(href='#')
+          code    p Hover over me
+          code    .hoverBtn
+          code    .hoverBtn-bottom     
+    hr
         
         
     .container
@@ -143,10 +165,10 @@ html(lang="en")
         h1 _Background-Colors
     .container
       .row
-        .three.cols.background-white.text-center.padding-twenty background-white
-        .three.cols.background-blue.text-center.padding-twenty background-blue
-        .three.cols.background-black.text-center.padding-twenty background-black
-        .three.cols.background-dark-gray.text-center.padding-twenty background-dark-gray
+        .three.cols.background-white.text-center background-white
+        .three.cols.background-blue.text-center background-blue
+        .three.cols.background-black.text-center background-black
+        .three.cols.background-dark-gray.text-center background-dark-gray
     .container
       .row
         pre.language-css
@@ -200,9 +222,197 @@ html(lang="en")
           code
               li  .li Order list-item        
       hr
+              
     .container
       .row
-        h1 _CodeBlock        
+        h1 _Modals
       .row
-        .ten.cols
+        .twelve.cols
+          // Modal #1
+          a.show(aria-haspopup='true') Modal #1
+          section.mask(role='dialog')
+          section.modal(role='alert')
+            a.close(role='button') X
+            section.modal__content.container
+              .row
+                .six.cols.pr-30
+                  h2.mb-0.text-uppercase.bold Project Name
+                  h6.book  
+                    a(href='#') thefoutaspa.com
+                    span Website Reconstruction 
+                  hr
+                  p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                .six.cols
+                  img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg')
+          // Modal #2
+          a.show(aria-haspopup='true') Modal #2
+          section.mask(role='dialog')
+          section.modal(role='alert')
+            a.close(role='button') X
+            section.modal__content
+              h2 Modal #2
+          // Modal #3
+          a.show(aria-haspopup='true') Modal #3
+          section.mask(role='dialog')
+          section.modal(role='alert')
+            a.close(role='button') X
+            section.modal__content
+              h2 Modal #3        
+    
+    .container.mt-30
+      .row
+        pre.language-pug
+          // Modal #1
+          code 
+        
+        hr  
+            
+    
+            
+    .container
+      .row
+        h1 _Counter
+      .row
+        h3.counter 2,523
+        p Customers
+      .row
+        pre.language-pug
+          code h3.counter 2,523
+          code p Customers
+      hr
+    
+    
+    
+    //- Cards  
+    .container
+      .row
+        h1 _Cards
+    .container
+      .row
+        .four.cols
+          .post-module
+            .thumbnail
+              img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg')
+
+            // Post Content
+            .post-content
+              .category Photos
+              h1.title City Lights in New York
+              h2.sub_title The city that never sleeps. Until it does sleep.
+              p.description New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.
+              .post-meta
+                .btn.btn-primary Read More 
+        .four.cols
+          .post-module
+            .thumbnail
+              img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg')
+
+            // Post Content
+            .post-content
+              .category Photos
+              h1.title City Lights in New York
+              h2.sub_title The city that never sleeps. Until it does sleep.
+              p.description New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.
+              .post-meta
+                .btn.btn-primary Read More 
+        .four.cols
+          .post-module
+            .thumbnail
+              img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg')
+
+            // Post Content
+            .post-content
+              .category Photos
+              h1.title City Lights in New York
+              h2.sub_title The city that never sleeps. Until it does sleep.
+              p.description New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.
+              .post-meta
+                .btn.btn-primary Read More                        
+      
+    .container.mt-50
+      .row
+        pre.language-pug
+          code .four.cols
+          code  .post-module
+          code    .thumbnail
+          code      img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg')
+
+          code    .post-content
+          code      .category Photos
+          code      h1.title City Lights in New York
+          code      h2.sub_title The city that never sleeps. Until it does sleep.
+          code      p.description New York, the largest city in the U.S.
+          code      .post-meta
+          code        .btn.btn-primary Read More
+      hr
+          
+    .container      
+      .row
+        h1 _Slanted_Background
+        .slanted-background.padding-twenty.pt-50.pb-50 
+          h3.text-center.padding-twenty.book  Slanted Background
+    
+    .container.mt-50
+      .row
+        pre.language-pug
+          code .slanted-background
+      hr
+              
+    .container
+      .row
+        h1 _Border_Animation
+    .container
+      .row    
+        .border-animation--wrapper
+           a.border-animation.under.pt-20.pb-20 Under the Bridge
+           a.border-animation.all.pt-20.pb-20 All Around Town
+           a.border-animation.over.pt-20.pb-20 Flying High
+           a.border-animation.right.pt-20.pb-20 Right Hook
+           a.border-animation.left.pt-20.pb-20 Left Hook
+           a.border-animation.bang.pt-20.pb-20 Interesting
+      
+    .container
+      .row
+        pre.language-code
+          code .border-animation--wrapper
+          code   a.border-animation.under Under the Bridge
+          code   a.border-animation.all All Around Town
+          code   a.border-animation.over Flying High
+          code   a.border-animation.right Right Hook
+          code   a.border-animation.left Left Hook
+          code   a.border-animation.bang Interesting
+      hr
+        
+    .container
+      .row
+        h1 _Portfolio_Item
+      .row
+        .four.cols
+          .border-animation--wrapper
+            a.border-animation.all
+              .port-items
+                img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg')
+                p.pt-2.mb-10.medium.text-center The Fouta Spa
+        .four.cols
+          .border-animation--wrapper
+            a.border-animation.all
+              .port-items
+                img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg')
+                p.pt-2.mb-10.medium.text-center The Fouta Spa
+        .four.cols
+          .border-animation--wrapper
+            a.border-animation.all
+              .port-items
+                img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg')
+                p.pt-2.mb-10.medium.text-center The Fouta Spa                
+    .container
+      .row
+        pre.language-pug
+          code .border-animation--wrapper
+          code  a.border-animation.all
+          code    .port-items
+          code      img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg')
+          code      p.pt-2.mb-10.medium.text-center The Fouta Spa
+      hr
+        
           

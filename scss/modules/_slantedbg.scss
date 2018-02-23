@@ -1,0 +1,6 @@
+.slanted-background{
+  background-color: $dark-gray;
+  color: $white;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+}

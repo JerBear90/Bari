@@ -7,7 +7,6 @@ var gulp = require('gulp'),
   connect = require('gulp-connect'),
   jshint = require('gulp-jshint');
 
-
 // run this task by typing in gulp pug in CLI
 gulp.task('pug', function buildHTML(){
   return gulp.src('templates/*.pug')
@@ -24,12 +23,6 @@ gulp.task('styles', function() {
 });
 
 // Gulp JS
-// gulp.task('scripts', function() {
-//   return gulp.src('js/**/*.js')
-//       .pipe(gulp.dest('build/js/'));
-// });
-
-// configure the jshint task
 gulp.task('jshint', function() {
   return gulp.src('js/**/*.js')
     .pipe(jshint())

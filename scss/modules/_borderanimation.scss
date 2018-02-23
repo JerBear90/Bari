@@ -1,0 +1,91 @@
+.border-animation--wrapper *,
+.border-animation--wrapper *:after,
+.border-animation--wrapper *:before{
+   box-sizing:border-box;
+}
+
+.border-animation{
+   display:inline-block;
+   text-align:center;
+   position:relative;
+   overflow:display;
+   cursor:pointer;
+}
+
+.border-animation:after{
+   content: ' ';
+   position:absolute;
+   top:0px;
+   left:0px;
+   width:0%;
+   height:0%;
+   z-index:1;
+   border-top:3.5px solid $blue;
+   border-right:3.5px solid $blue;
+   border-width:0px;
+}
+
+.border-animation:before{
+   // background-color: hsla(0%, 0, 0%, .5);
+   content: ' ';
+   position:absolute;
+   bottom:0px;
+   right:0px;
+   width:0%;
+   height:0%;
+   z-index:1;
+   border-bottom:3.5px solid $blue;
+   border-left:3.5px solid $blue;
+   border-width:0px;
+}
+
+.border-animation.all:hover:after{
+   border-width:3.5px;
+   animation:aW_nH 0.5s, sW_aH 0.5s, sW_sH 1s infinite;
+   animation-delay:0s, 0.5s, 1s;
+}
+.border-animation.all:hover:before{
+   border-width:3.5px;
+   animation:nW_nH 1s, aW_nH 0.5s, sW_aH 0.5s, sW_sH 1s infinite;
+   animation-delay:0s, 1s, 1.5s, 2s;
+}
+.border-animation.bang:hover:after,
+.border-animation.bang:hover:before{
+   border-width:3.5px;
+   animation:aW_nH 0.5s, sW_aH 0.5s, sW_sH 1s infinite;
+   animation-delay:0s, 0.5s, 1s;
+}
+
+.border-animation.under:hover:before{
+   border-width:3.5px;
+   animation: aW_nH 0.5s;
+   width:100%;
+}
+
+.border-animation.over:hover:after{
+   border-width:3.5px;
+   animation: aW_nH 0.5s;
+   width:100%;
+}
+
+.border-animation.left:hover:after{
+   border-width:3.5px;
+   animation: nW_aH 0.5s;
+   height:100%;
+}
+
+.border-animation.right:hover:before{
+   border-width:3.5px;
+   animation: nW_aH 0.5s;
+   height:100%;
+}
+
+/* A weird set of keyframes that can do anything */
+@keyframes aW_sH{ from{height:100%; width:0%;} to{height:100%; width:100%;} }
+@keyframes sW_aH{ from{width:100%; height:0%;} to{width:100%; height:100%;} }
+@keyframes sW_sH{ from{width:100%; height:100%;} to{width:100%; height:100%;} }
+@keyframes nW_nH{ from,to{border-width:0px;} }
+@keyframes nW_aH{ from{height:0%;} to{height:100%;} }
+@keyframes nW_sH{ from,to{height:100%;} }
+@keyframes sW_nH{ from,to{width:100%;} }
+@keyframes aW_nH{ from{width:0%;} to{width:100%;} }

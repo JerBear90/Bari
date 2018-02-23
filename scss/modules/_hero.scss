@@ -12,6 +12,7 @@ $url-1: url(http://rel.resultspw.com/images/large-hero.jpg);
 	background-color: transparentize($white, .5);
 	overflow: hidden;
 }
+
 @media only screen and(max-width: 767px) {
   .hero-img-holder {
   	height: 300px;
@@ -29,13 +30,13 @@ $url-1: url(http://rel.resultspw.com/images/large-hero.jpg);
 		margin-top: 2.25em;
 		position: relative;
 	}
-	.home-static .container {
+	.hero-static .container {
     height: 500px;
 		margin: 0 auto;
 		max-width: 936px;
 		padding: 1em;
 	}
 }
-.home-static.ft-left .hero-img-holder {
+.hero-static.ft-left .hero-img-holder {
 	background-position: 75% 50%;
 }

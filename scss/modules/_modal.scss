@@ -1,0 +1,75 @@
+.center {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+// show button
+.show {
+  transition: background 500ms ease;
+  background: $blue;
+  padding: 10px 15px;
+  margin-right: 5px;
+  cursor: pointer;
+  color: #fff;
+  border: 0;
+
+  &:hover {
+    background: $white;
+  }
+}
+
+// Close Button
+.close {
+  position: absolute;
+  cursor: pointer;
+  padding: 20px;
+  color: blue;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+
+// The mask
+.mask {
+  background: rgba(0, 0, 0, 0.68);
+  visibility: hidden;
+  transition: 0.7s;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 50;
+  opacity: 0;
+  left: 0;
+  top: 0;
+}
+
+// Modal
+.modal {
+  transition: 0.5s ease-out;
+  background: white;
+  visibility: hidden;
+  position: fixed;
+  @extend .center;
+  height: 80vh;
+  width: 80vw;
+  z-index: 100;
+  opacity: 0;
+
+  .modal__content {
+    @extend .center;
+  }
+}
+
+// Class Active
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+// When active class is added, that affects the modal class
+.active + .modal{
+  visibility: visible;
+  opacity: 1;
+}
